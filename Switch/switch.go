@@ -34,4 +34,22 @@ func main() {
 		fmt.Println("It's after noon")
 	}
 
+	// what is this i interface{} thing? I know it's a type that can hold any value.
+	whatAmI := func(i interface{}) {
+		switch t := i.(type) {
+		case bool:
+			fmt.Println("I'm a bool")
+		case int:
+			fmt.Println("I'm an int")
+		case string:
+			fmt.Println("I'm a string")
+		default:
+			fmt.Printf("Don't know type %T\n", t)
+		}
+	}
+	whatAmI(true)
+	whatAmI(1)
+	whatAmI("hey")
+	whatAmI(3.14)
+
 }
