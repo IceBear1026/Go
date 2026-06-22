@@ -8,7 +8,9 @@ import (
 	"fmt"
 )
 
-// ServerState represents the state of a server.
+// This line means: Create a new custom type called ServerState, and underneath it, store it like an int.
+
+// So ServerState is not a struct, not a class, and not an actual server. It is a custom number type that we are going to use to represent server states.
 type ServerState int
 
 const (
